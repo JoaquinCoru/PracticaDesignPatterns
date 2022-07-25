@@ -48,6 +48,8 @@ extension SplashViewController:SplashViewProtocol{
          
          guard let destinationViewController  = homeStoryboard.instantiateInitialViewController() as? HomeViewController else {return}
         
+        destinationViewController.viewModel = HomeViewModel(viewDelegate: destinationViewController)
+        
          self.navigationController?.setViewControllers([destinationViewController], animated: true)
     }
     
