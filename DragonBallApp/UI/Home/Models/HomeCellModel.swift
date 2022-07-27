@@ -10,4 +10,5 @@ import Foundation
 struct HomeCellModel{
     let image:URL
     let title:String
+    let description:String
 }

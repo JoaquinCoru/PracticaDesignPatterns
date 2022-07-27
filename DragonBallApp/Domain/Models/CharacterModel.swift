@@ -8,12 +8,14 @@
 import Foundation
 
 struct CharacterModel :Decodable{
+    let id:String
     let photo:URL
     let name:String
     let description:String
+    let favorite:Bool
 }
 
-let sampleCharactersData: [CharacterModel] = try! JSONDecoder().decode([CharacterModel].self, from: getCharactersData(resourceName: "heroes")!)
+let sampleCharactersData: [CharacterModel] = try! JSONDecoder().decode([CharacterModel].self, from: getCharactersData(resourceName: "characters") ?? Data())
 
 
 func getCharactersData(resourceName: String) -> Data? {

@@ -26,6 +26,11 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         viewModel?.onViewsLoaded()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        activityIndicator.stopAnimating()
+    }
 
 
 }

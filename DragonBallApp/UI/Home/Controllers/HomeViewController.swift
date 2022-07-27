@@ -10,12 +10,14 @@ import UIKit
 protocol HomeViewProtocol: AnyObject{
     func updateViews()
     func navigateToDetail(with data:HomeCellModel?)
+    func showLoading(_ show:Bool)
 }
 
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var viewModel:HomeViewModelProtocol?
     
@@ -40,11 +42,31 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController:HomeViewProtocol{
     
+    func showLoading(_ show: Bool) {
+        switch show {
+            case true :
+                activityIndicator.startAnimating()
+                collectionView.isHidden = true
+                
+            case false:
+                activityIndicator.stopAnimating()
+                collectionView.isHidden = false
+                
+        }
+    }
+    
     func updateViews() {
         collectionView.reloadData()
     }
     
     func navigateToDetail(with data: HomeCellModel?) {
+        let detailStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+        
+        guard let data = data, let destination = detailStoryboard.instantiateInitialViewController() as? DetailViewController else {return}
+        
+        destination.viewModel = DetailViewModel(data: data, viewDelegate: destination)
+        
+        navigationController?.pushViewController(destination, animated: true)
         
     }
         
@@ -70,6 +92,11 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         }
 
         return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        viewModel?.onSelectedItem(at: indexPath.row)
     }
 
 

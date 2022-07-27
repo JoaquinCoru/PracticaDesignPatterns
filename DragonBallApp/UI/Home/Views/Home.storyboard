@@ -43,7 +43,7 @@
                                                                 <constraint firstAttribute="height" priority="999" constant="145" id="gnm-wj-uLM"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lagel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abj-hO-WmA">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abj-hO-WmA">
                                                             <rect key="frame" x="0.0" y="148" width="174" height="23"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,18 +78,25 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gs7-WY-AjK">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                                <color key="color" red="1" green="0.74117647060000003" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dOe-66-Ihp" secondAttribute="bottom" id="7s5-ul-ukn"/>
+                            <constraint firstItem="gs7-WY-AjK" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="LH8-KB-9YD"/>
                             <constraint firstItem="dOe-66-Ihp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="QHg-Py-MV0"/>
                             <constraint firstItem="dOe-66-Ihp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SxK-FV-ATe"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dOe-66-Ihp" secondAttribute="trailing" id="Y0b-js-j41"/>
+                            <constraint firstItem="gs7-WY-AjK" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="udD-7z-BYi"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="gs7-WY-AjK" id="XGD-SA-Exy"/>
                         <outlet property="collectionView" destination="dOe-66-Ihp" id="F9d-8D-ggu"/>
                     </connections>
                 </viewController>

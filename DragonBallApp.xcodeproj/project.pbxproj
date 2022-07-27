@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D23025A0288EC9FE00573B1F /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D230259F288EC9FE00573B1F /* Detail.storyboard */; };
+		D23025A2288ECBA400573B1F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23025A1288ECBA400573B1F /* DetailViewController.swift */; };
+		D23025A7288ECD6E00573B1F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23025A6288ECD6E00573B1F /* DetailViewModel.swift */; };
+		D23025A9288F118200573B1F /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23025A8288F118200573B1F /* NetworkModel.swift */; };
 		D237166A288D54C800A45CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2371669288D54C800A45CFC /* AppDelegate.swift */; };
 		D237166C288D54C800A45CFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237166B288D54C800A45CFC /* SceneDelegate.swift */; };
 		D237166E288D54C800A45CFC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237166D288D54C800A45CFC /* SplashViewController.swift */; };
@@ -20,11 +24,15 @@
 		D2371699288DC14600A45CFC /* HomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2371698288DC14600A45CFC /* HomeCellModel.swift */; };
 		D237169F288DC21900A45CFC /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237169E288DC21900A45CFC /* UIImageViewExtension.swift */; };
 		D23716A4288DC41E00A45CFC /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23716A3288DC41E00A45CFC /* CharacterModel.swift */; };
-		D23716A6288DC4EA00A45CFC /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = D23716A5288DC4EA00A45CFC /* heroes.json */; };
+		D23716A6288DC4EA00A45CFC /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = D23716A5288DC4EA00A45CFC /* characters.json */; };
 		D23716A9288DCC3900A45CFC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23716A8288DCC3900A45CFC /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D230259F288EC9FE00573B1F /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		D23025A1288ECBA400573B1F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D23025A6288ECD6E00573B1F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		D23025A8288F118200573B1F /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		D2371666288D54C800A45CFC /* DragonBallApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2371669288D54C800A45CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D237166B288D54C800A45CFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +48,7 @@
 		D2371698288DC14600A45CFC /* HomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellModel.swift; sourceTree = "<group>"; };
 		D237169E288DC21900A45CFC /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		D23716A3288DC41E00A45CFC /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
-		D23716A5288DC4EA00A45CFC /* heroes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
+		D23716A5288DC4EA00A45CFC /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
 		D23716A8288DCC3900A45CFC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +63,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D230259E288EC94900573B1F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D23025A3288ECD2C00573B1F /* Views */,
+				D23025A4288ECD3500573B1F /* Controllers */,
+				D23025A5288ECD4600573B1F /* ViewModels */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		D23025A3288ECD2C00573B1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D230259F288EC9FE00573B1F /* Detail.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D23025A4288ECD3500573B1F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D23025A1288ECBA400573B1F /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D23025A5288ECD4600573B1F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D23025A6288ECD6E00573B1F /* DetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D23025AA288F11C900573B1F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D23716A5288DC4EA00A45CFC /* characters.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		D237165D288D54C800A45CFC = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +148,7 @@
 			children = (
 				D237168B288D895600A45CFC /* Splash */,
 				D2371695288D8FFB00A45CFC /* Home */,
+				D230259E288EC94900573B1F /* Detail */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -192,7 +243,7 @@
 		D23716A1288DC3F700A45CFC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				D23716A5288DC4EA00A45CFC /* heroes.json */,
+				D23025AA288F11C900573B1F /* Data */,
 				D23716A2288DC40500A45CFC /* Models */,
 			);
 			path = Domain;
@@ -202,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				D23716A3288DC41E00A45CFC /* CharacterModel.swift */,
+				D23025A8288F118200573B1F /* NetworkModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,7 +328,8 @@
 				D2371673288D54C900A45CFC /* Assets.xcassets in Resources */,
 				D2371689288D855E00A45CFC /* Splash.storyboard in Resources */,
 				D2371690288D89EE00A45CFC /* Home.storyboard in Resources */,
-				D23716A6288DC4EA00A45CFC /* heroes.json in Resources */,
+				D23716A6288DC4EA00A45CFC /* characters.json in Resources */,
+				D23025A0288EC9FE00573B1F /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23025A2288ECBA400573B1F /* DetailViewController.swift in Sources */,
 				D2371694288D8EE800A45CFC /* SplashViewModel.swift in Sources */,
 				D237166E288D54C800A45CFC /* SplashViewController.swift in Sources */,
+				D23025A9288F118200573B1F /* NetworkModel.swift in Sources */,
 				D2371697288DBEC700A45CFC /* CellView.swift in Sources */,
 				D23716A9288DCC3900A45CFC /* HomeViewModel.swift in Sources */,
 				D237166A288D54C800A45CFC /* AppDelegate.swift in Sources */,
 				D2371699288DC14600A45CFC /* HomeCellModel.swift in Sources */,
+				D23025A7288ECD6E00573B1F /* DetailViewModel.swift in Sources */,
 				D237166C288D54C800A45CFC /* SceneDelegate.swift in Sources */,
 				D23716A4288DC41E00A45CFC /* CharacterModel.swift in Sources */,
 				D237169F288DC21900A45CFC /* UIImageViewExtension.swift in Sources */,
